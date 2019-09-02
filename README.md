@@ -1,2 +1,2 @@
 # JavaScript
-This repository includes some of my JavaScript projects from basic to advanced.
+Explore some of my JavaScript projects from basic to advanced.
