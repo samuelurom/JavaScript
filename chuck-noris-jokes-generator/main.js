@@ -1,5 +1,4 @@
 // Grab the DOM elements
-
 const button = document.querySelector('button');
 const input = document.querySelector('input[type="number"]');
 const sectionGrid = document.querySelector('.grid');
@@ -24,20 +23,17 @@ function getJokes(e) {
 
          if (response.type === 'success') {
             response.value.forEach(function (joke) {
-
                output += `
                   <article class="card">
                      <p class="joke">${joke.joke}</p>
                   </article>
                `;
-
             });
          } else {
             output += '<p>Something wne wrong';
          }
 
          sectionGrid.innerHTML = output;
-
       }
    }
 
