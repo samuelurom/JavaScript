@@ -3,6 +3,9 @@
 
 // Example: "What if we try a super-long word such as otorhinolaryngology" should return 19.
 
+
+// Method 1: Simple Loop
+
 function findLongestWordLength(str) {
   // First convert the string to array
   let words = str.split(' ');
@@ -17,4 +20,25 @@ function findLongestWordLength(str) {
     }
   }
   return longestWord.length;
+}
+
+// Method 1B: For of loop
+
+function findLongestWord(str) {
+  let words = str.split(' ');
+  let longestWord = '';
+  for (let word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+
+// Method 2: Reduce and Math.max Methods
+
+function findLongestWord(str) {
+  return str.split(' ').reduce((accumulator, currentValue) => {
+    return Math.max(accumulator, currentValue.length);
+  }, 0); // Initialize accumulator to 0
 }
