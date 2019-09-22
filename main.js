@@ -30,7 +30,7 @@ function getJokes(e) {
                `;
             });
          } else {
-            output += '<p>Something wne wrong';
+            output += '<p>Something went wrong</p>';
          }
 
          sectionGrid.innerHTML = output;
